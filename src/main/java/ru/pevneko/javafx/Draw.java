@@ -3,6 +3,8 @@ package ru.pevneko.javafx;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
@@ -29,6 +31,12 @@ public class Draw extends Application {
 
         Group root = new Group();
         Scene scene1 = new Scene(root, width, length);
+
+
+
+        Canvas canvas = new Canvas();
+        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+
 
         //фигуры
         //Создание и настройка линий
@@ -84,7 +92,7 @@ public class Draw extends Application {
         stage.setScene(scene1);
 
 
-        stage.setTitle("Тестовое окно");
+        stage.setTitle(str);
         stage.show();
     }
 }
